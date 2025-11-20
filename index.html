@@ -1,123 +1,118 @@
 `html
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FEDA SHOP - الدفع عند الاستلام</title>
+  <meta charset="UTF-8">
+  <title>FEDA SHOP - عروض اليوم</title>
+  <meta name="description" content="FEDA SHOP - منتجات مغربية بتوصيل مجاني والدفع عند الاستلام. تواصل معنا عبر WhatsApp.">
   <style>
     body {
-      font-family: 'Tahoma', sans-serif;
-      background-color: #fefefe;
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
-      direction: rtl;
-    }
-    header {
-      background-color: #d32f2f;
-      color: white;
-      padding: 20px;
       text-align: center;
     }
-    .container {
+    header {
+      background-color: #25D366;
+      color: white;
       padding: 20px;
     }
     .product {
-      border: 1px solid #ddd;
-      border-radius: 8px;
+      background: white;
+      margin: 15px;
       padding: 15px;
-      margin-bottom: 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .product h2 {
-      margin: 0 0 10px;
-      color: #d32f2f;
+    .product img {
+      max-width: 100%;
+      border-radius: 6px;
     }
     .price {
       font-size: 18px;
-      color: #388e3c;
-    }
-    .old-price {
-      text-decoration: line-through;
-      color: #888;
-      margin-right: 10px;
-    }
-    .description {
+      color: green;
+      font-weight: bold;
       margin: 10px 0;
     }
-    .whatsapp {
-      display: block;
-      text-align: center;
-      margin: 30px 0;
+    .description {
+      font-size: 14px;
+      margin-bottom: 10px;
     }
-    .whatsapp a {
+    .whatsapp-button {
+      display: inline-block;
       background-color: #25D366;
       color: white;
-      padding: 15px 25px;
-      border-radius: 50px;
+      padding: 10px 20px;
       text-decoration: none;
-      font-size: 18px;
+      border-radius: 5px;
       font-weight: bold;
-      display: inline-block;
     }
     footer {
       background-color: #eee;
-      text-align: center;
-      padding: 15px;
+      padding: 20px;
       font-size: 14px;
-      color: #555;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>FEDA SHOP</h1>
-    <p>منتجات مختارة - الدفع عند الاستلام</p>
-  </header>
+<header>
+  <h1>مرحبا بكم في FEDA SHOP</h1>
+  <p>منتجات مغربية أصلية بتوصيل مجاني والدفع عند الاستلام</p>
+</header>
 
-  <div class="container">
+<!-- المنتج 1 -->
+<div class="product">
+  <img src="images/mixeur.jpg" alt="Mixeur plongeur 4in1">
+  <h2>Mixeur plongeur 4in1 - ELITE</h2>
+  <p class="price">199 درهم</p>
+  <p class="description">خلاط، عصارة، مضرب، فرم – إنوكس، متوفر بالأحمر والأبيض.</p>
+  <a class="whatsapp-button" href="https://wa.me/2126XXXXXXXX?text=بغيت نطلب Mixeur plongeur 4in1">طلب عبر WhatsApp</a>
+</div>
 
-    <div class="product">
-      <h2>خلاط 4in1 من Elite</h2>
-      <p class="price"><span class="old-price">299 درهم</span>199 درهم</p>
-      <p class="description">متعدد الوظائف: طحن، خلط، فرم، عصر. متوفر بالأحمر والأبيض.</p>
-    </div>
+<!-- المنتج 2 -->
+<div class="product">
+  <img src="images/speaker.jpg" alt="سماعة بلوتوث رياضية">
+  <h2>سماعة بلوتوث رياضية</h2>
+  <p class="price">199 درهم</p>
+  <p class="description">بطارية طويلة، مريحة للرياضة والتنقل، صوت نقي.</p>
+  <a class="whatsapp-button" href="https://wa.me/2126XXXXXXXX?text=بغيت نطلب سماعة بلوتوث رياضية">طلب عبر WhatsApp</a>
+</div>
 
-    <div class="product">
-      <h2>سماعات بلوتوث رياضية</h2>
-      <p class="price"><span class="old-price">249 درهم</span>149 درهم</p>
-      <p class="description">صوت نقي، بطارية طويلة، تصميم مريح للرياضة والتنقل.</p>
-    </div>
+<!-- المنتج 3 -->
+<div class="product">
+  <img src="images/watch.jpg" alt="ساعة ذكية مقاومة للماء">
+  <h2>ساعة ذكية مقاومة للماء</h2>
+  <p class="price">199 درهم</p>
+  <p class="description">إشعارات الهاتف، قياس نبضات القلب، تصميم أنيق.</p>
+  <a class="whatsapp-button" href="https://wa.me/2126XXXXXXXX?text=بغيت نطلب ساعة ذكية مقاومة للماء">طلب عبر WhatsApp</a>
+</div>
 
-    <div class="product">
-      <h2>ساعة ذكية مقاومة للماء</h2>
-      <p class="price"><span class="old-price">259 درهم</span>179 درهم</p>
-      <p class="description">تتبع الخطوات، نبض القلب، إشعارات الهاتف، تصميم أنيق.</p>
-    </div>
+<!-- المنتج 4 -->
+<div class="product">
+  <img src="images/lamp.jpg" alt="مصباح LED قابل لإعادة الشحن">
+  <h2>مصباح LED قابل لإعادة الشحن</h2>
+  <p class="price">199 درهم</p>
+  <p class="description">إضاءة قوية، مثالي للمكياج والسفر، يدوم طويلاً.</p>
+  <a class="whatsapp-button" href="https://wa.me/2126XXXXXXXX?text=بغيت نطلب مصباح LED قابل لإعادة الشحن">طلب عبر WhatsApp</a>
+</div>
 
-    <div class="product">
-      <h2>مصباح LED قابل للشحن</h2>
-      <p class="price"><span class="old-price">129 درهم</span>89 درهم</p>
-      <p class="description">إضاءة قوية، مثالي للمنزل أو الرحلات، يدوم طويلاً.</p>
-    </div>
+<!-- المنتج 5 -->
+<div class="product">
+  <img src="images/kitchen.jpg" alt="أدوات تنظيم المطبخ">
+  <h2>أدوات تنظيم المطبخ</h2>
+  <p class="price">199 درهم</p>
+  <p class="description">سهل الترتيب، سهل التنظيف، تصميم أنيق وعصري.</p>
+  <a class="whatsapp-button" href="https://wa.me/2126XXXXXXXX?text=بغيت نطلب أدوات تنظيم المطبخ">طلب عبر WhatsApp</a>
+</div>
 
-    <div class="product">
-      <h2>منظم أدوات المطبخ</h2>
-      <p class="price"><span class="old-price">99 درهم</span>59 درهم</p>
-      <p class="description">يحافظ على ترتيب المطبخ، سهل التنظيف، تصميم ذكي.</p>
-    </div>
-
-    <div class="whatsapp">
-      <a href="https://wa.me/qr/WB2R7A52DVNPI1" target="_blank">تواصل معنا على واتساب</a>
-    </div>
-
-  </div>
-
-  <footer>
-    &copy; 2025 FEDA SHOP - جميع الحقوق محفوظة
-  </footer>
+<footer>
+  <p>📦 الدفع عند الاستلام | 🚚 التوصيل لجميع المدن المغربية خلال 24-72 ساعة</p>
+  <p>📞 تواصل معنا عبر WhatsApp: <a href="https://wa.me/2126XXXXXXXX">اضغط هنا</a></p>
+  <p>جميع الحقوق محفوظة - FEDA SHOP 2025</p>
+</footer>
 
 </body>
 </html>
