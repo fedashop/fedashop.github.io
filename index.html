@@ -1,119 +1,218 @@
-`html
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>FEDA SHOP - عروض اليوم</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FEDA SHOP - الدفع عند الاستلام</title>
   <meta name="description" content="FEDA SHOP - منتجات مغربية بتوصيل مجاني والدفع عند الاستلام. تواصل معنا عبر WhatsApp.">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      direction: rtl;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+    :root{
+      --accent:#25D366;
+      --danger:#d32f2f;
+      --card-bg:#fff;
+      --body-bg:#f7f7f7;
+      --text:#222;
     }
-    header {
-      background-color: #25D366;
-      color: white;
-      padding: 20px;
+    *{box-sizing:border-box}
+    body{
+      font-family: Arial, Tahoma, sans-serif;
+      margin:0;
+      padding:0;
+      direction:rtl;
+      background-color:var(--body-bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
     }
-    .product {
-      background: white;
-      margin: 15px;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    header{
+      background: linear-gradient(90deg,var(--accent),#10b45a);
+      color:#fff;
+      padding:22px 16px;
+      text-align:center;
     }
-    .product img {
-      max-width: 100%;
-      border-radius: 6px;
+    header h1{margin:0;font-size:22px}
+    header p{margin:6px 0 0;font-size:14px;opacity:.95}
+    .container{max-width:1100px;margin:18px auto;padding:0 12px}
+    .intro{
+      text-align:center;margin:14px 0 8px;font-size:14px;color:#555;
     }
-    .price {
-      font-size: 18px;
-      color: green;
-      font-weight: bold;
-      margin: 10px 0;
+
+    /* grid products */
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:18px;
+      margin-top:12px;
     }
-    .description {
-      font-size: 14px;
-      margin-bottom: 10px;
+    .product{
+      background:var(--card-bg);
+      border-radius:10px;
+      padding:12px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.07);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      min-height:360px;
     }
-    .whatsapp-button {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+    .product img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:8px;
+      display:block;
+      margin-bottom:10px;
     }
-    footer {
-      background-color: #eee;
-      padding: 20px;
-      font-size: 14px;
+    .product h2{
+      font-size:18px;
+      margin:6px 0;
+      color:#111;
+    }
+    .description{
+      font-size:13px;
+      color:#444;
+      line-height:1.35;
+      flex-grow:1;
+    }
+    .price{
+      margin-top:10px;
+      font-size:18px;
+      color:var(--danger);
+      font-weight:700;
+    }
+    .old-price{
+      text-decoration:line-through;color:#777;font-weight:500;margin-left:8px;font-size:13px;
+    }
+    .tag-free{color:#0a8b3b;font-weight:700;margin-top:6px}
+    .actions{
+      margin-top:12px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+    .whatsapp-button{
+      background:var(--accent);
+      color:#fff;
+      padding:10px 12px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+      display:inline-block;
+      flex:1;
+      text-align:center;
+    }
+    .details-btn{
+      background:#eee;
+      color:#333;
+      padding:10px 12px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-block;
+      text-align:center;
+      width:44%;
+    }
+    footer{
+      background:#fff;
+      padding:18px 12px;
+      margin-top:22px;
+      text-align:center;
+      color:#555;
+      font-size:14px;
+      border-top:1px solid #eee;
+    }
+    @media (max-width:520px){
+      .product{min-height:360px}
+      .product img{height:200px}
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>مرحبا بكم في FEDA SHOP</h1>
-  <p>منتجات مغربية أصلية بتوصيل مجاني والدفع عند الاستلام</p>
+  <h1>FEDA SHOP</h1>
+  <p>الدفع عند الاستلام | توصيل لجميع المدن المغربية | تواصل سريع عبر WhatsApp</p>
 </header>
 
-<!-- المنتج 1 -->
-<div class="product">
-  <img src="images/mixeur.jpg" alt="Mixeur plongeur 4in1">
-  <h2>Mixeur plongeur 4in1 - ELITE</h2>
-  <p class="price">199 درهم</p>
-  <p class="description">خلاط، عصارة، مضرب، فرم – إنوكس، متوفر بالأحمر والأبيض.</p>
-  <a class="whatsapp-button" href="https://wa.me/2126XXXXXXXX?text=بغيت نطلب Mixeur plongeur 4in1">طلب عبر WhatsApp</a>
-</div>
+<div class="container">
+  <p class="intro">أحسن العروض ديال اليوم — نسخ الرابط وشاركو مع الزبائن أو شاركوه فـ الستوري</p>
 
-<!-- المنتج 2 -->
-<div class="product">
-  <img src="images/speaker.jpg" alt="سماعة بلوتوث رياضية">
-  <h2>سماعة بلوتوث رياضية</h2>
-  <p class="price">199 درهم</p>
-  <p class="description">بطارية طويلة، مريحة للرياضة والتنقل، صوت نقي.</p>
-  <a class="whatsapp-button" href="https://wa.me/2126XXXXXXXX?text=بغيت نطلب سماعة بلوتوث رياضية">طلب عبر WhatsApp</a>
-</div>
+  <section class="products">
 
-<!-- المنتج 3 -->
-<div class="product">
-  <img src="images/watch.jpg" alt="ساعة ذكية مقاومة للماء">
-  <h2>ساعة ذكية مقاومة للماء</h2>
-  <p class="price">199 درهم</p>
-  <p class="description">إشعارات الهاتف، قياس نبضات القلب، تصميم أنيق.</p>
-  <a class="whatsapp-button" href="https://wa.me/2126XXXXXXXX?text=بغيت نطلب ساعة ذكية مقاومة للماء">طلب عبر WhatsApp</a>
-</div>
+    <!-- منتج 1: Mixeur -->
+    <div class="product">
+      <img src="https://i.postimg.cc/7hGX7QnR/IMG_20251117_WA0036.jpg" alt="Mixeur plongeur 4in1 - ELITE">
+      <h2>Mixeur plongeur 4in1 - ELITE</h2>
+      <p class="description">خلاط، عصارة، مضرب، فرم – إنوكس. متوفر بالأحمر والأبيض. عملي وسهل التنظيف ومناسب لكل المطابخ.</p>
+      <p class="price"><span class="old-price">299 درهم</span> 199 درهم</p>
+      <p class="tag-free">توصيل مجاني</p>
+      <div class="actions">
+        <a class="whatsapp-button" href="https://wa.me/212639373662?text=سلام%20بغيت%20نطلب%20Mixeur%20plongeur%204in1%20-%20ELITE%20(199dh)" target="_blank" rel="noopener">طلب عبر WhatsApp</a>
+        <a class="details-btn" href="#mixeur">تفاصيل</a>
+      </div>
+    </div>
 
-<!-- المنتج 4 -->
-<div class="product">
-  <img src="images/lamp.jpg" alt="مصباح LED قابل لإعادة الشحن">
-  <h2>مصباح LED قابل لإعادة الشحن</h2>
-  <p class="price">199 درهم</p>
-  <p class="description">إضاءة قوية، مثالي للمكياج والسفر، يدوم طويلاً.</p>
-  <a class="whatsapp-button" href="https://wa.me/2126XXXXXXXX?text=بغيت نطلب مصباح LED قابل لإعادة الشحن">طلب عبر WhatsApp</a>
-</div>
+    <!-- منتج 2: سماعة -->
+    <div class="product">
+      <img src="https://i.postimg.cc/fyt5Xgfr/IMG_20251117_WA0035.jpg" alt="سماعة بلوتوث رياضية">
+      <h2>سماعة بلوتوث رياضية</h2>
+      <p class="description">بطارية طويلة العمر، مريحة للرياضة والتنقل، جودة صوت واضحة وعازلة للضجيج الخفيف.</p>
+      <p class="price">199 درهم</p>
+      <p class="tag-free">توصيل مجاني</p>
+      <div class="actions">
+        <a class="whatsapp-button" href="https://wa.me/212639373662?text=سلام%20بغيت%20نطلب%20سماعة%20بلوتوث%20رياضية%20(199dh)" target="_blank" rel="noopener">طلب عبر WhatsApp</a>
+        <a class="details-btn" href="#speaker">تفاصيل</a>
+      </div>
+    </div>
 
-<!-- المنتج 5 -->
-<div class="product">
-  <img src="images/kitchen.jpg" alt="أدوات تنظيم المطبخ">
-  <h2>أدوات تنظيم المطبخ</h2>
-  <p class="price">199 درهم</p>
-  <p class="description">سهل الترتيب، سهل التنظيف، تصميم أنيق وعصري.</p>
-  <a class="whatsapp-button" href="https://wa.me/2126XXXXXXXX?text=بغيت نطلب أدوات تنظيم المطبخ">طلب عبر WhatsApp</a>
-</div>
+    <!-- منتج 3: رف أحذية 7 طبقات (الوصـف الكامل) -->
+    <div class="product">
+      <img src="https://i.postimg.cc/Wb32CFmS/IMG_20251121_WA0012.jpg" alt="7-Tier Dustproof Shoe Rack Organizer">
+      <h2>7-Tier Dustproof Shoe Rack Organizer</h2>
+      <p class="description">
+        منظم أحذية بـ7 طبقات أنيق ومضاد للغبار. تنظيم احترافي للأحذية في مساحة صغيرة. باب أمامي يحمي من الغبار ويحافظ على نظافة الأحذية. يتّسع حتى 24 زوج؛ مناسب للعائلة أو المدخل الرئيسي. الأبعاد: 127×66×29 سم؛ رفوف بارتفاع 17 سم. تصميم أنيق، سهل التركيب بدون أدوات.
+      </p>
+      <p class="price">179 درهم</p>
+      <p class="tag-free">توصيل مجاني</p>
+      <div class="actions">
+        <a class="whatsapp-button" href="https://wa.me/212639373662?text=سلام%20بغيت%20نطلب%207-Tier%20Dustproof%20Shoe%20Rack%20Organizer%20(179dh)" target="_blank" rel="noopener">طلب عبر WhatsApp</a>
+        <a class="details-btn" href="#shoe1">تفاصيل</a>
+      </div>
+    </div>
 
-<footer>
-  <p>📦 الدفع عند الاستلام | 🚚 التوصيل لجميع المدن المغربية خلال 24-72 ساعة</p>
-  <p>📞 تواصل معنا عبر WhatsApp: <a href="https://wa.me/2126XXXXXXXX">اضغط هنا</a></p>
-  <p>جميع الحقوق محفوظة - FEDA SHOP 2025</p>
-</footer>
+    <!-- منتج 4: رف أحذية صورة 2 -->
+    <div class="product">
+      <img src="https://i.postimg.cc/WpSN56ZM/IMG_20251121_WA0010.jpg" alt="رف أحذية - تصميم أنيق">
+      <h2>رف أحذية - تصميم أنيق</h2>
+      <p class="description">نسخة أنيقة من رف الأحذية العمودي، تحافظ على النظام وتوفر مساحة؛ مناسب للمداخل والغرف.</p>
+      <p class="price">179 درهم</p>
+      <p class="tag-free">توصيل مجاني</p>
+      <div class="actions">
+        <a class="whatsapp-button" href="https://wa.me/212639373662?text=سلام%20بغيت%20نطلب%20رف%20أحذية%20(179dh)" target="_blank" rel="noopener">طلب عبر WhatsApp</a>
+        <a class="details-btn" href="#shoe2">تفاصيل</a>
+      </div>
+    </div>
+
+    <!-- منتج 5: رف أحذية صورة 3 / عرض تكميلي -->
+    <div class="product">
+      <img src="https://i.postimg.cc/hPjS6z82/IMG_20251121_WA0011.jpg" alt="رف أحذية - صورة إضافية">
+      <h2>رف أحذية - حجم كبير</h2>
+      <p class="description">حل عملي لتخزين عدد كبير من الأحذية مع حماية من الغبار وتصميم عمودي لتوفير المساحة.</p>
+      <p class="price">179 درهم</p>
+      <p class="tag-free">توصيل مجاني</p>
+      <div class="actions">
+        <a class="whatsapp-button" href="https://wa.me/212639373662?text=سلام%20بغيت%20نطلب%20رف%20أحذية%20(179dh)" target="_blank" rel="noopener">طلب عبر WhatsApp</a>
+        <a class="details-btn" href="#shoe3">تفاصيل</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>📦 الدفع عند الاستلام | 🚚 التوصيل لجميع المدن المغربية خلال 24-72 ساعة</p>
+    <p>📞 تواصل معنا عبر WhatsApp: <a href="https://wa.me/212639373662" target="_blank" rel="noopener">0639373662</a></p>
+    <p>جميع الحقوق محفوظة - FEDA SHOP 2025</p>
+  </footer>
+</div>
 
 </body>
 </html>
-`
