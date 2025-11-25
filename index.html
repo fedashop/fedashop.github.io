@@ -20,15 +20,18 @@
   <!-- ✅ Open Graph (مشاركة على فيسبوك وواتساب) -->
   <meta property="og:title" content="FEDA SHOP - متجر مغربي للمنتجات المنزلية">
   <meta property="og:description" content="منتجات منزلية ومطبخية بجودة عالية وسعر مناسب. الدفع عند الاستلام والتوصيل لجميع المدن المغربية.">
-  <meta property="og:image" content="https://i.postimg.cc/Qtz3rSJK/IMG_20251117_WA0036.jpg">
+  <meta property="og:image" content="https://i.postimg.cc/Qtz3rSJK/IMG20251117WA0036.jpg">
   <meta property="og:url" content="https://fedashop.github.io">
   <meta property="og:type" content="website">
 
   <!-- ✅ Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summarylargeimage">
   <meta name="twitter:title" content="FEDA SHOP - متجر مغربي للمنتجات المنزلية">
   <meta name="twitter:description" content="منتجات منزلية ومطبخية بجودة عالية وسعر مناسب. الدفع عند الاستلام والتوصيل لجميع المدن المغربية.">
-  <meta name="twitter:image" content="https://i.postimg.cc/Qtz3rSJK/IMG_20251117_WA0036.jpg">
+  <meta name="twitter:image" content="https://i.postimg.cc/Qtz3rSJK/IMG20251117WA0036.jpg">
+
+  <!-- ✅ أيقونة المتجر -->
+  <link rel="icon" href="https://i.postimg.cc/wvkKFqgT/FEDA-SHOP-20251125-080551-0000.png" type="image/png">
 
   <style>
     :root{
@@ -57,9 +60,27 @@
     header h1{margin:0;font-size:22px}
     header p{margin:6px 0 0;font-size:14px;opacity:.95}
     .container{max-width:1100px;margin:18px auto;padding:0 12px}
-    .intro{
-      text-align:center;margin:14px 0 8px;font-size:14px;color:#555;
+    .intro{text-align:center;margin:14px 0 8px;font-size:14px;color:#555;}
+
+    / ✅ من نحن /
+    .about-box {
+      background: #f9f9f9;
+      padding: 20px;
+      margin: 25px auto;
+      text-align: center;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      max-width: 600px;
     }
+    .about-logo {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+    }
+    .about-box h2 {margin: 10px 0; color: #333;}
+    .about-box p {font-size: 14px; color: #444; line-height: 1.6;}
+
+    / ✅ المنتجات /
     .products{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -85,33 +106,12 @@
       display:block;
       margin-bottom:10px;
     }
-    .product h2{
-      font-size:18px;
-      margin:6px 0;
-      color:#111;
-    }
-    .description{
-      font-size:13px;
-      color:#444;
-      line-height:1.35;
-      flex-grow:1;
-    }
-    .price{
-      margin-top:10px;
-      font-size:18px;
-      color:var(--danger);
-      font-weight:700;
-    }
-    .old-price{
-      text-decoration:line-through;color:#777;font-weight:500;margin-left:8px;font-size:13px;
-    }
+    .product h2{font-size:18px;margin:6px 0;color:#111;}
+    .description{font-size:13px;color:#444;line-height:1.35;flex-grow:1;}
+    .price{margin-top:10px;font-size:18px;color:var(--danger);font-weight:700;}
+    .old-price{text-decoration:line-through;color:#777;font-weight:500;margin-left:8px;font-size:13px;}
     .tag-free{color:#0a8b3b;font-weight:700;margin-top:6px}
-    .actions{
-      margin-top:12px;
-      display:flex;
-      gap:8px;
-      align-items:center;
-    }
+    .actions{margin-top:12px;display:flex;gap:8px;align-items:center;}
     .whatsapp-button{
       background:var(--accent);
       color:#fff;
@@ -134,11 +134,9 @@
       text-align:center;
       width:44%;
     }
-    (footer){
-  <p>📦 الدفع عند الاستلام | التوصيل لجميع المدن المغربية خلال 24-72 ساعة</p>
-  <p><strong>تواصل عبر WhatsApp:</strong> <a href="https://wa.me/212649612196" target="_blank" rel="noopener">0649612196</a></p>
-  <p>© 2025 FEDA SHOP - جميع الحقوق محفوظة</p>
-</footer>
+
+    / ✅ الفوتر /
+    footer {
       background:#fff;
       padding:18px 12px;
       margin-top:22px;
@@ -147,6 +145,7 @@
       font-size:14px;
       border-top:1px solid #eee;
     }
+
     @media (max-width:520px){
       .product{min-height:360px}
       .product img{height:200px}
@@ -161,8 +160,24 @@
 </header>
 
 <div class="container">
-  <p class="intro">أحسن العروض ديال اليوم</p>
 
+  <!-- ✅ فقرة من نحن -->
+  <section class="about">
+    <div class="about-box">
+      <img src="https://i.postimg.cc/wvkKFqgT/FEDA-SHOP-20251125-080551-0000.png" alt="FEDA SHOP Logo" class="about-logo">
+      <h2>من نحن؟</h2>
+      <p>
+        FEDA SHOP هو متجر إلكتروني مغربي متخصص في بيع المنتجات المنزلية والمطبخية بجودة عالية وأسعار مناسبة.<br>
+        نقدم خدمة الدفع عند الاستلام، والتوصيل يشمل جميع المدن المغربية خلال 24 إلى 72 ساعة.<br>
+        هدفنا هو تسهيل تجربة التسوق الإلكتروني للمواطن المغربي وتوفير منتجات عملية وموثوقة.<br>
+        تواصل معنا في أي وقت عبر WhatsApp وسنساعدك بكل سرور.
+      </p>
+    </div>
+  </section>
+
+  <p class="intro">أحسن العروض ديال اليوم 🔥</p>
+
+  <!-- ✅ المنتجات -->
   <section class="products">
    <!-- منتج 1: Mixeur -->
     <div class="product">
