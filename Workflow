@@ -8,13 +8,13 @@ on:
 permissions:
   contents: write
   pages: write
+  id-token: write
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "fedashop.shop" > ./CNAME
       - uses: actions/upload-pages-artifact@v1
         with:
           path: ./
@@ -22,5 +22,8 @@ jobs:
   deploy:
     needs: publish
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: https://fedashop.github.io
     steps:
-      - uses: actions/deploy-pages@v1
+      - uses: actions/deploy-pages@v3
