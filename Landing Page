@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>صفحة هبوط - سخان الماء الفوري</title>
+  <style>
+    body {font-family: Tahoma, Arial; margin:0; padding:0; background:#f7f7f7; color:#222;}
+    .container {max-width:700px; margin:0 auto; padding:20px; text-align:center;}
+    h1 {color:#d3272f;}
+    h2 {color:#253D36; margin-top:30px;}
+    .cta {display:inline-block; background:#25D366; color:#fff; padding:12px 20px; text-decoration:none; border-radius:6px; font-size:18px; margin-top:20px;}
+    img {max-width:100%; border-radius:8px; margin:12px 0;}
+    ul {text-align:right; margin:0 auto; max-width:500px;}
+    li {margin:8px 0;}
+    .testimonial {background:#fff; padding:12px; margin:10px auto; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,.1);}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- القسم 1: العنوان والصورة -->
+    <h1>☄️ سخان الماء الفوري</h1>
+    <img src="https://i.postimg.cc/y8qFZjVr/IMG-20251130-WA0117.jpg" alt="سخان الماء الفوري">
+    <p>الصنبور السحري لتسخين الماء في 5 ثواني فقط! شاشة LED رقمية، سهل التركيب ويوفر حتى 70% من الماء والكهرباء.</p>
+    <p><strong>💵 السعر: 250 درهم</strong> + توصيل مجاني 🛵</p>
+
+    <!-- القسم 2: المميزات -->
+    <h2>✨ المميزات</h2>
+    <ul>
+      <li>تسخين فوري للماء في 5 ثواني</li>
+      <li>شاشة LED رقمية لعرض الحرارة</li>
+      <li>يوفر 70% من استهلاك الماء والكهرباء</li>
+      <li>سهل التركيب على جميع أنواع المغاسل</li>
+      <li>قدرة قوية 3000 واط</li>
+    </ul>
+
+    <!-- القسم 3: آراء العملاء -->
+    <h2>💬 آراء العملاء</h2>
+    <div class="testimonial">"منتج رائع، ركبته بسهولة والماء كيسخن بسرعة!" – سعيد من طنجة</div>
+    <div class="testimonial">"وفّر عليا بزاف من فاتورة الكهرباء، أنصح به." – فاطمة من الرباط</div>
+
+    <!-- زر الشراء -->
+    <a class="cta" href="https://wa.me/212649612196?text=سلام%20بغيت%20نطلب%20سخان%20الماء%20الفوري%20(250dh)" target="_blank">اطلب الآن عبر WhatsApp</a>
+  </div>
+</body>
+</html>
